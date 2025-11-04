@@ -1,0 +1,35 @@
+backend:
+name: git-gateway
+branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+- name: "site"
+label: "Site Content"
+files:
+- file: "data/recipes.json"
+label: "Recipes"
+name: "recipes"
+fields:
+- label: "Recipes"
+name: "recipes"
+widget: "list"
+collapsed: false
+fields:
+- { label: "Title", name: "title", widget: "string" }
+- { label: "Slug", name: "slug", widget: "string" }
+- { label: "Summary", name: "summary", widget: "text" }
+- { label: "Age Range", name: "age_range", widget: "string", default: "6+ months" }
+- { label: "Age Tag", name: "age_tag", widget: "select", options: ["6","8","10"], default: "6" }
+- { label: "Time", name: "time", widget: "string", default: "10 min" }
+- { label: "Texture", name: "texture", widget: "string", default: "Smooth" }
+- { label: "Storage", name: "storage", widget: "string", default: "Fridge 48h • Freeze 3 months" }
+- { label: "Allergens", name: "allergens", widget: "list", field: { label: "Allergen", name: "allergen", widget: "string" } }
+- { label: "Ingredients", name: "ingredients", widget: "list", field: { label: "Ingredient", name: "ingredient", widget: "string" } }
+- { label: "Steps", name: "steps", widget: "list", field: { label: "Step", name: "step", widget: "text" } }
+- { label: "Notes", name: "notes", widget: "text", required: false }
+- { label: "Image", name: "image", widget: "image" }
+- { label: "Alt Text", name: "alt", widget: "string" }
+- { label: "Video URL", name: "video_url", widget: "string", required: false, hint: "Optional YouTube/Vimeo link" }
