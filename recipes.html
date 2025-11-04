@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baby Purée Recipes</title>
+  <meta name="description" content="Simple, safe, and tasty purée recipes for babies starting solids (6 months+).">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍼</text></svg>">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="logo">🍼 Baby Purée Recipes</div>
+    <nav>
+      <a href="index.html" class="">Home</a>
+      <a href="recipes.html" class="active">Recipes</a>
+      <a href="about.html" class="">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h1>Recipes</h1>
+  <div class="searchbar">
+    <input id="search" type="search" placeholder="Search ingredients or recipe name…">
+    <select id="age" aria-label="Filter by age">
+      <option value="">All ages</option>
+      <option value="6">6+ months (Stage 1)</option>
+      <option value="8">8+ months (Stage 2)</option>
+      <option value="10">10+ months (Chunkier)</option>
+    </select>
+  </div>
+  <div id="recipes-grid" class="grid"></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    © 2025 Baby Purée Recipes • Educational only — always consult your pediatrician.
+  </div>
+</footer>
+<div class="recipe-modal">
+  <div class="modal-card">
+    <button class="modal-close" aria-label="Close modal">✕</button>
+    <img id="modal-img" class="modal-media" alt="Recipe image">
+    <div id="modal-body" class="modal-body"></div>
+  </div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
